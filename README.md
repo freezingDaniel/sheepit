@@ -88,7 +88,6 @@ services:
     sheepit:
         image: freezingdaniel/sheepit:latest
         restart: unless-stopped
-        user: $(id -u):$(id -g)
         cpu_shares: 10
         environment:
             - LOGIN=username
