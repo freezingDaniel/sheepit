@@ -89,6 +89,8 @@ services:
         image: freezingdaniel/sheepit:latest
         restart: unless-stopped
         cpu_shares: 10
+        volumes:
+            - ./sheepit:/sheepit
         environment:
             - LOGIN=username
             - PASSWORD=renderKeyOrPassoword
