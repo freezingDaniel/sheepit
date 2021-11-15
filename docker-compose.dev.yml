@@ -1,0 +1,12 @@
+version: "3"
+services:
+    sheepit-dev-cpu:
+        build: .
+        restart: "no"
+        volumes:
+            - ./sheepit:/sheepit
+        environment:
+            - LOGIN=username
+            - PASSWORD=renderKeyOrPassword
+            - VERBOSE=TRUE
+            - MEMORY=1024M
