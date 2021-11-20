@@ -40,7 +40,7 @@ For additional reference run `java -jar sheepit-client --help`
 ```bash
 docker run --name "sheepit" \
 -e LOGIN=username \
--e PASSWORD=renderKeyOrPassoword \
+-e PASSWORD=renderKeyOrPassword \
 freezingdaniel/sheepit:latest
 ```
 
@@ -49,7 +49,7 @@ freezingdaniel/sheepit:latest
 ```bash
 docker run --name "sheepit-cpu" \
 -e LOGIN=username \
--e PASSWORD=renderKeyOrPassoword \
+-e PASSWORD=renderKeyOrPassword \
 -v /path/to/local/folder:/sheepit \
 sheepit:latest
 ```
@@ -62,7 +62,7 @@ Refer to https://docs.docker.com/config/containers/resource_constraints/#gpu to 
 docker run --name "sheepit-gpu" \
     --gpus '"device=0"' \
     -e LOGIN=username \
-    -e PASSWORD=renderKeyOrPassoword \
+    -e PASSWORD=renderKeyOrPassword \
     -e COMPUTE_METHOD=GPU \
     -e GPU=CUDA_0 \
     -v /path/to/local/folder:/sheepit \
@@ -93,7 +93,7 @@ services:
             - ./sheepit:/sheepit
         environment:
             - LOGIN=username
-            - PASSWORD=renderKeyOrPassoword
+            - PASSWORD=renderKeyOrPassword
             - MEMORY=8G
 ```
 
@@ -109,7 +109,7 @@ services:
             - ./sheepit:/sheepit
         environment:
             - LOGIN=username
-            - PASSWORD=renderKeyOrPassoword
+            - PASSWORD=renderKeyOrPassword
             - MEMORY=8G
 ```
 
@@ -125,7 +125,7 @@ services:
             - ./sheepit:/sheepit
         environment:
             - LOGIN=username
-            - PASSWORD=renderKeyOrPassoword
+            - PASSWORD=renderKeyOrPassword
             - COMPUTE_METHOD=GPU
             - GPU=CUDA_0
             - MEMORY=8G
@@ -151,7 +151,7 @@ services:
             - ./sheepit:/sheepit
         environment:
             - LOGIN=username
-            - PASSWORD=renderKeyOrPassoword
+            - PASSWORD=renderKeyOrPassword
             - COMPUTE_METHOD=CPU_GPU
             - GPU=CUDA_0
             - MEMORY=8G
@@ -175,7 +175,7 @@ services:
             - ./sheepit:/sheepit
         environment:
             - LOGIN=username
-            - PASSWORD=renderKeyOrPassoword
+            - PASSWORD=renderKeyOrPassword
             - MEMORY=8G
     sheepit-gpu:
         image: sheepit:latest
@@ -184,7 +184,7 @@ services:
             - ./sheepit:/sheepit
         environment:
             - LOGIN=username
-            - PASSWORD=renderKeyOrPassoword
+            - PASSWORD=renderKeyOrPassword
             - COMPUTE_METHOD=GPU
             - GPU=CUDA_0
             - MEMORY=8G
