@@ -51,7 +51,7 @@ docker run --name "sheepit-cpu" \
 -e LOGIN=username \
 -e PASSWORD=renderKeyOrPassword \
 -v /path/to/local/folder:/sheepit \
-sheepit:latest
+freezingdaniel/sheepit:latest
 ```
 
 ## Docker with GPU:
@@ -66,7 +66,7 @@ docker run --name "sheepit-gpu" \
     -e COMPUTE_METHOD=GPU \
     -e GPU=CUDA_0 \
     -v /path/to/local/folder:/sheepit \
-    sheepit:latest
+    freezingdaniel/sheepit:latest
 ```
 
 ## Graceful shutdown
@@ -119,7 +119,7 @@ services:
 version: "3"
 services:
     sheepit-gpu:
-        image: sheepit:latest
+        image: freezingdaniel/sheepit:latest
         restart: unless-stopped
         volumes:
             - ./sheepit:/sheepit
@@ -145,7 +145,7 @@ One at a time:
 version: "3"
 services:
     sheepit-gpu:
-        image: sheepit:latest
+        image: freezingdaniel/sheepit:latest
         restart: unless-stopped
         volumes:
             - ./sheepit:/sheepit
@@ -178,7 +178,7 @@ services:
             - PASSWORD=renderKeyOrPassword
             - MEMORY=8G
     sheepit-gpu:
-        image: sheepit:latest
+        image: freezingdaniel/sheepit:latest
         restart: unless-stopped
         volumes:
             - ./sheepit:/sheepit
