@@ -53,7 +53,6 @@ if [ -n "$MEMORY" ];            then COMMAND+=" -memory $MEMORY";               
 if [ -n "$PASSWORD" ];          then COMMAND+=" -password $PASSWORD";                    else echo "No password provided!"; exit 2; fi
 if [ -n "$PRIORITY" ];          then COMMAND+=" -priority $PRIORITY";                    fi
 if [ -n "$PROXY" ];             then COMMAND+=" -proxy $PROXY";                          fi
-if [ -n "$RENDERBUCKET_SIZE" ]; then COMMAND+=" -renderbucket-size $RENDERBUCKET_SIZE";  fi
 if [ -n "$RENDERTIME" ];        then COMMAND+=" -rendertime $RENDERTIME";                fi
 if [ -n "$REQUEST_TIME" ];      then COMMAND+=" -request-time $REQUEST_TIME";            fi
 if [ -n "$SERVER" ];            then COMMAND+=" -server $SERVER";                        fi
