@@ -17,7 +17,7 @@ echo
 
 # Download/update client
 CLIENT=sheepit.jar
-VERSION_REGEX='([0-9]1,)\.([0-9]1,)\.([0-9]1,)'
+VERSION_REGEX='([0-9]+)\.([0-9]+)\.([0-9]+)'
 CLIENT_URL="https://www.sheepit-renderfarm.com/media/applet/client-latest.php"
 AVOID_COLLISION=$RANDOM
 
