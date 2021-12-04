@@ -23,7 +23,6 @@ If you don't know what a specific setting means, it is likely that you won't nee
 | LOGIN             | string                | **(REQUIRED)** username                                                                                            |
 | MEMORY            | string                | **(RECOMMENDED)** Maximum memory allow to be used by renderer, number with unit (800M, 2G, ...)                                      |
 | PASSWORD          | string                | **(REQUIRED)** password                                                                                            |
-| RENDERBUCKET_SIZE | int                   | Set a custom GPU renderbucket size (32 for 32x32px, 64 for 64x64px, and so on). NVIDIA GPUs support a maximum renderbucket size of 512x512 pixel, while AMD GPUs support a maximum 2048x2048 pixel renderbucket size. Minimum renderbucket size is 32 pixels for all GPUs (default: -1) |
 | RENDERTIME        | int                   | Maximum time allow for each frame (in minutes) (default: -1)                                                       |
 | REQUEST_TIME      | string                | H1:M1-H2:M2,H3:M3-H4:M4 Use the 24h format. For example to request job between 2am-8.30am and 5pm-11pm you should do --request-time 2:00-8:30,17:00-23:00 Caution, it's the requesting job time to get a project, not the working time |
 | SERVER            | string                | Render-farm server, default https://client.sheepit-renderfarm.com (default: https://client.sheepit-renderfarm.com) |
