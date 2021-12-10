@@ -47,7 +47,7 @@ if [ -n "$COMPUTE_METHOD" ];    then COMMAND+=" -compute-method $COMPUTE_METHOD"
 if [ -n "$CORES" ];             then COMMAND+=" -cores $CORES";                          fi
 if [ -n "$EXTRAS" ];            then COMMAND+=" -extras $EXTRAS";                        fi
 if [ -n "$GPU" ];               then COMMAND+=" -gpu $GPU";                              fi
-if [ -n "$HOSTNAME" ];          then COMMAND+=" -hostname $HOSTNAME";                    else echo "Using hostname: freezingDaniel_$(date +%Y-%m-%d_%H-%M-%S)"; COMMAND+=" -hostname freezingDaniel_$(date +%Y-%m-%d_%H-%M-%S)"; fi
+if [ -n "$HOSTNAME" ];          then COMMAND+=" -hostname $HOSTNAME";                    else echo "Using hostname: freezingDaniel_docker-$(date +%Y%m%d_%H%M%S)"; COMMAND+=" -hostname freezingDaniel_docker-$(date +%Y%m%d_%H%M%S)"; fi
 if [ -n "$LOGIN" ];             then COMMAND+=" -login $LOGIN";                          else echo "No login provided!"; exit 1; fi
 if [ -n "$MEMORY" ];            then COMMAND+=" -memory $MEMORY";                        fi
 if [ -n "$PASSWORD" ];          then COMMAND+=" -password $PASSWORD";                    else echo "No password provided!"; exit 2; fi
