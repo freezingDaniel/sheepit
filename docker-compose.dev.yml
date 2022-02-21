@@ -10,3 +10,4 @@ services:
             - PASSWORD=renderKeyOrPassword
             - VERBOSE=TRUE
             - MEMORY=1024M
+            - SERVER=http://sandbox.sheepit-renderfarm.com
