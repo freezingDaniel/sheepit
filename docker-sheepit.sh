@@ -69,5 +69,16 @@ echo "*========================*"
 echo "Thx for rendering! <3"
 echo
 
-#echo "$COMMAND" # uncomment and comment below for debugging
-$COMMAND
+$COMMAND &
+CHILD_PID=$!
+
+# Stop Client
+stop() {
+  echo "Forwarding Signal to $child"
+  kill "$child" # kill -SIGINT doesn't want to work
+  wait "$child"
+}
+
+trap stop SIGINT
+wait "$CHILD_PID"
+echo "Bye Bye :)"
