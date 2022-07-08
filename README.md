@@ -1,6 +1,6 @@
 This Repo is no longer maintained as of the release of the official docker image:
-https://hub.docker.com/r/sheepitrenderfarm/client
-https://www.sheepit-renderfarm.com/getstarted
+- https://hub.docker.com/r/sheepitrenderfarm/client
+- https://www.sheepit-renderfarm.com/getstarted
 
 # Docker Sheepit
 
